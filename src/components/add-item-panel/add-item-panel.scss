@@ -1,0 +1,16 @@
+$green: #06b328;
+
+.add-item-panel {
+    display: flex;
+
+    > div {
+        flex-grow: 1;
+        margin-right: 10px;
+    }
+
+    button {
+        padding: 5px 8%;
+        color: $green;
+        border-color: $green;
+    }
+}
