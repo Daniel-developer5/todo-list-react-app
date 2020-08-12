@@ -5,10 +5,10 @@ import Layout from '../layout/'
 import './app.scss'
 
 export default class App extends Component {
-    maxId = 0
+    maxId = localStorage.getItem('maxId') || 0
 
     state = {
-        todos: []
+        todos: JSON.parse(localStorage.getItem('todos')) || []
     }
 
     onAddItem = text => {
@@ -73,6 +73,9 @@ export default class App extends Component {
     }
 
     render() {
+        localStorage.setItem('todos', JSON.stringify(this.state.todos))
+        localStorage.setItem('maxId', this.maxId)
+
         return (
             <Layout 
                 todos={ this.state.todos }
