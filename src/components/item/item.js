@@ -64,6 +64,7 @@ export default class Item extends Component {
                         <Checkbox 
                             color="secondary"
                             onClick={ onMarkAsDone }
+                            checked={ done }
                         />
                     </div>
                     <Content 
